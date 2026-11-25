@@ -1,0 +1,56 @@
+{
+    "name": "b2b/enterprise-portal",
+    "description": "Kurumsal B2B E-Ticaret & Bayi Yönetim Sistemi (Saf Modern PHP 8.2+, MVC, Tailwind CSS, Alpine.js)",
+    "keywords": [
+        "b2b",
+        "enterprise",
+        "ecommerce",
+        "dealer-portal",
+        "php8",
+        "mvc",
+        "pricing-engine",
+        "rfq",
+        "erp"
+    ],
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "B2B Enterprise Team",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.2.0",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-bcmath": "*",
+        "ext-gd": "*",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "ext-fileinfo": "*"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Seeds\\": "database/seeds/"
+        },
+        "files": [
+            "app/Core/helpers.php"
+        ]
+    },
+    "scripts": {
+        "migrate": "@php database/migrate.php",
+        "migrate:seed": "@php database/migrate.php seed",
+        "migrate:fresh": "@php database/migrate.php fresh",
+        "serve": "@php -S 127.0.0.1:8000 -t public"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

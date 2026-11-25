@@ -1,0 +1,53 @@
+# =============================================================================
+# B2B Enterprise Portal - .gitignore
+# =============================================================================
+
+# --- Bağımlılıklar & Derlenmiş Paketler ---
+/vendor/
+/node_modules/
+
+# --- Çalışma Zamanı & Loglar ---
+*.log
+/storage/logs/*.log
+!/storage/logs/.gitkeep
+
+# --- Yüklemeler & Kullanıcı Dosyaları ---
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+!/storage/uploads/tax-plates/.gitkeep
+
+# --- Kurulum Kilit Dosyası (Yeni kurulum yapılabilmesi için git'e dahil edilmez) ---
+/storage/installed.lock
+
+# --- Yerel Ortam & Gizli Bilgiler ---
+.env
+.env.backup
+.env.local
+.env.*.local
+/config/database.local.php
+
+# --- Geliştirme Araçları & Hassas Yapay Zeka Dosyaları ---
+opencode.json
+BASLANGIC_PROMPTU.md
+
+# --- Test, QA & Geçici Dosyalar ---
+/.playwright-mcp/
+/qa/
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/network-all.txt
+*.csv
+
+# --- Dahil Edilmesi Zorunlu Statik Varlıklar ---
+!/public/assets/images/**
+
+# --- Editör & İşletim Sistemi ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.sublime-project
+*.sublime-workspace
